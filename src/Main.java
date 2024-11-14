@@ -6,10 +6,10 @@ import java.util.TreeSet;
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> nums1 = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        List<Integer> nums1 = new ArrayList<>(List.of(-1, 1, -1100, -1111, 500, 4, 5, 5, 6, 7));
         for (Integer num : nums1) {
-            if (num % 2 == 1) {
-                System.out.print(num);
+            if (num % 2 == 1 || num % 2 == -1) {
+                System.out.println(num);
             }
         }
 
@@ -19,7 +19,7 @@ public class Main {
         Set<Integer> treeSet = new TreeSet<>(nums2);
         for (Integer integer : treeSet) {
             if (integer % 2 == 0) {
-                System.out.print(integer);
+                System.out.println(integer);
             }
         }
 
@@ -41,7 +41,7 @@ public class Main {
         strings1.removeAll(result);
         System.out.println(strings1);
 
-        List<String> strings2 = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+        List<String> strings2 = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
         int counter = 0;
         int amount = 1;
         for (int j = 1; j < strings2.size(); j++) {
